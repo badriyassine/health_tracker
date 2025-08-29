@@ -1,6 +1,6 @@
-# React
+# Health Tracker
 
-A modern React-based project utilizing the latest frontend technologies and tools for building responsive web applications.
+Health Tracker is a modern web application that helps users monitor, log, and improve their health by tracking vital signs, daily activities, and wellness goals. It also provides secure data sharing with healthcare providers for better patient care and remote monitoring.
 
 ## 🚀 Features
 
