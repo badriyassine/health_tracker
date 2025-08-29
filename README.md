@@ -1,4 +1,4 @@
-# Health Tracker
+# 🩺 Health Tracker
 
 Health Tracker is a modern web application that helps users monitor, log, and improve their health by tracking vital signs, daily activities, and wellness goals. It also provides secure data sharing with healthcare providers for better patient care and remote monitoring.
 
