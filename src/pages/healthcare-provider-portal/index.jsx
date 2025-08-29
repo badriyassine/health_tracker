@@ -25,7 +25,7 @@ const HealthcareProviderPortal = () => {
   const patients = [
     {
       id: "P001",
-      name: "John Anderson",
+      name: "Ahmed Azoz",
       age: 45,
       gender: "Male",
       mrn: "MRN-2024-001",
@@ -54,7 +54,7 @@ const HealthcareProviderPortal = () => {
     },
     {
       id: "P002",
-      name: "Sarah Mitchell",
+      name: "Sara Ben Ali",
       age: 38,
       gender: "Female",
       mrn: "MRN-2024-002",
@@ -84,7 +84,7 @@ const HealthcareProviderPortal = () => {
     },
     {
       id: "P003",
-      name: "Michael Chen",
+      name: "Ibrahim Elhassan",
       age: 52,
       gender: "Male",
       mrn: "MRN-2024-003",

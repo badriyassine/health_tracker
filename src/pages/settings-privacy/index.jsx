@@ -7,9 +7,9 @@ const SettingsPrivacy = () => {
   const [expandedSections, setExpandedSections] = useState({});
   const [settings, setSettings] = useState({
     // Account Settings
-    firstName: 'John',
-    lastName: 'Doe',
-    email: 'john.doe@email.com',
+    firstName: 'Yassine',
+    lastName: 'Badri',
+    email: 'yassine.badri@email.com',
     phone: '+1 (555) 123-4567',
     dateOfBirth: '1990-05-15',
     gender: 'male',
