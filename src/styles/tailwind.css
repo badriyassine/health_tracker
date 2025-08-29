@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #2563EB; /* Trust-building blue (blue-600) */
+    --color-primary-50: #EFF6FF; /* Light blue tint (blue-50) */
+    --color-primary-100: #DBEAFE; /* Lighter blue (blue-100) */
+    --color-primary-500: #3B82F6; /* Medium blue (blue-500) */
+    --color-primary-700: #1D4ED8; /* Darker blue (blue-700) */
+    --color-primary-900: #1E3A8A; /* Darkest blue (blue-900) */
+    
+    /* Secondary Colors */
+    --color-secondary: #059669; /* Health-positive green (emerald-600) */
+    --color-secondary-50: #ECFDF5; /* Light green tint (emerald-50) */
+    --color-secondary-100: #D1FAE5; /* Lighter green (emerald-100) */
+    --color-secondary-500: #10B981; /* Medium green (emerald-500) */
+    --color-secondary-700: #047857; /* Darker green (emerald-700) */
+    --color-secondary-900: #064E3B; /* Darkest green (emerald-900) */
+    
+    /* Accent Colors */
+    --color-accent: #7C3AED; /* Sophisticated purple (violet-600) */
+    --color-accent-50: #F5F3FF; /* Light purple tint (violet-50) */
+    --color-accent-100: #EDE9FE; /* Lighter purple (violet-100) */
+    --color-accent-500: #8B5CF6; /* Medium purple (violet-500) */
+    --color-accent-700: #6D28D9; /* Darker purple (violet-700) */
+    --color-accent-900: #4C1D95; /* Darkest purple (violet-900) */
+    
+    /* Background Colors */
+    --color-background: #FAFBFC; /* Soft off-white (slate-50) */
+    --color-surface: #FFFFFF; /* Pure white */
+    --color-surface-secondary: #F8FAFC; /* Light gray surface (slate-50) */
+    
+    /* Text Colors */
+    --color-text-primary: #1F2937; /* Deep charcoal (gray-800) */
+    --color-text-secondary: #6B7280; /* Balanced gray (gray-500) */
+    --color-text-tertiary: #9CA3AF; /* Light gray (gray-400) */
+    --color-text-inverse: #FFFFFF; /* White text */
+    
+    /* Status Colors */
+    --color-success: #10B981; /* Vibrant green (emerald-500) */
+    --color-success-50: #ECFDF5; /* Light success tint (emerald-50) */
+    --color-success-100: #D1FAE5; /* Lighter success (emerald-100) */
+    --color-success-700: #047857; /* Darker success (emerald-700) */
+    
+    --color-warning: #F59E0B; /* Warm amber (amber-500) */
+    --color-warning-50: #FFFBEB; /* Light warning tint (amber-50) */
+    --color-warning-100: #FEF3C7; /* Lighter warning (amber-100) */
+    --color-warning-700: #B45309; /* Darker warning (amber-700) */
+    
+    --color-error: #EF4444; /* Clear red (red-500) */
+    --color-error-50: #FEF2F2; /* Light error tint (red-50) */
+    --color-error-100: #FEE2E2; /* Lighter error (red-100) */
+    --color-error-700: #B91C1C; /* Darker error (red-700) */
+    
+    /* Border Colors */
+    --color-border: #E5E7EB; /* Minimal border (gray-200) */
+    --color-border-light: #F3F4F6; /* Light border (gray-100) */
+    --color-border-dark: #D1D5DB; /* Dark border (gray-300) */
+    
+    /* Shadow Colors */
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-large: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-700 focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200 ease-out;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-700 focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 transition-all duration-200 ease-out;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg shadow-light border border-border;
+  }
+  
+  .input {
+    @apply border border-border rounded-md px-3 py-2 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200 ease-out;
+  }
+  
+  .health-metric-pulse {
+    animation: health-pulse 3s ease-in-out infinite;
+  }
+  
+  @keyframes health-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.02); }
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
